@@ -1,0 +1,46 @@
+
+<!-- <button class="btn btn-primary mr-2">Find</button> -->
+<div>
+
+    <!-- <ngb-tabset></ngb-tabset> -->
+    <table >
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">DiscountPercentage</th>
+        <th scope="col">Rating</th>
+        <th scope="col">stock</th>
+        <th scope="col">brand</th>
+                <!-- <th scope="col">thumbnail</th>
+        <th scope="col">Images</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let assign1 of responsedata;let i=index">
+                <!-- <th scope="row">1</th> -->
+                <td>{{assign1.id}}</td>
+                <td>{{assign1.title}}</td>
+                <td>{{assign1.description}}</td>
+                <td>{{assign1.price}}</td>
+               <td>{{assign1.discountPercentage}}</td>
+        <td>{{assign1.rating}}</td>
+        <td>{{assign1.stock}}</td>
+        <td>{{assign1.brand}}</td> 
+        <button class="btn btn-primary mr-2" (click)="onview(i)">View</button>
+                <!-- <td><img src={{assign1.thumbnail}} alt="thumbnail" class="thumbnail"></td>
+        <td *ngFor="let imgs of assign1.images">
+          <img src={{imgs}} height="50px"></td> -->
+            </tr>
+
+
+
+        </tbody>
+    </table>
+   
+</div>
+<ng-template #elseblock>
+    <h2 class="text-success">404 Found</h2>
+</ng-template>
